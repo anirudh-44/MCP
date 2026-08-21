@@ -80,5 +80,9 @@ def categories():
     with open(CATEGORIES_PATH, "r", encoding="utf-8") as f:
         return f.read()
 
+
 if __name__ == "__main__":
-    mcp.run()
+#    mcp.run()          # USE THIS FOR LOCAL MCP SERVER
+    mcp.run(transport="http", host="0.0.0.0", port=8000)  # USE THIS FOR REMOTE MCP SERVER
+
+ 
